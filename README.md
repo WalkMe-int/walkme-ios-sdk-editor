@@ -17,7 +17,7 @@ The WalkMe Editor (power mode) SDK embeds the in-app editor so you can author an
 Add the package dependency in Xcode:
 
 1. **File → Add Package Dependencies…**
-2. Enter the repository URL: **https://github.com/WalkMe-int/walkme-ios-sdk**
+2. Enter the repository URL: **https://github.com/WalkMe-int/walkme-ios-sdk-editor**
 3. Choose the **WalkMeEditor** product and add it to your app target.
 
 Releases are version-tagged on that repo; pick the version that matches your WalkMe Mobile account and integration notes.
