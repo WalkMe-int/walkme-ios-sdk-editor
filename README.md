@@ -65,10 +65,6 @@ WalkMePowerMode.start(withGUID: "<your-guid>", options: options)
 
 See `WalkMe/WalkMe/Common/Player/Public/WalkMeStartOptions.h` for full definitions.
 
-## Repository layout (contributors)
-
-- **WalkMeEditor** — editor / power mode framework in this repo (`WalkMe/WalkMeEditor/`); implementation shares code with the player target under `WalkMe/Common/`.
-
 ## Support
 
 - [WalkMe Help Center](https://support.walkme.com)  
