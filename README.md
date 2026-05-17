@@ -4,8 +4,6 @@
 
 The WalkMe Editor (power mode) SDK embeds the in-app editor so you can author and preview WalkMe Mobile content inside your app—without shipping new binaries for every content change.
 
-> **Beta:** This SDK is currently in beta.
-
 ## Requirements
 
 - iOS **14.0** or later  
