@@ -32,6 +32,7 @@ The primary integration surface is `WalkMePowerMode` in `WalkMe/WalkMeEditor/WMP
 | `stop()` | Stops the SDK. |
 | `restart()` | Restarts the SDK, re-initializing with the current configuration. Equivalent to stopping and starting with the same options. |
 | `setUserId(_:)` | Sets the end-user identifier for storage, analytics, and targeting. |
+| `setTenantId(_:)` | Sets the tenant identifier (up to 50 characters). The value is persisted and attached to every outgoing event. Calling it again overwrites the previously stored value; pass `nil` to clear it. |
 | `setVariable(key:value:)` | Sets a variable for targeting and segmentation. |
 | `setLanguage(_:)` | Changes the active language for WalkMe content. |
 | `sendEvent(name:attributes:)` | Sends a custom tracked event: `name` identifies the event; `attributes` is an optional dictionary of key/value data for analytics and WalkMe engagement reporting. |
