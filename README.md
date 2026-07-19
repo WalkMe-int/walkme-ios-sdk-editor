@@ -41,6 +41,7 @@ The primary integration surface is `WalkMePowerMode` in `WalkMe/WalkMeEditor/WMP
 | `dismissItem()` | Dismisses the currently displayed item, if any. |
 | `setAnalyticsHandler(_:)` | Registers a callback invoked for every analytics event the SDK emits. Pass `nil` to remove. Prefer setting `analyticsHandler` on `WalkMeStartOptions` instead so the handler is active from the first event. |
 | `setItemCallbacksDelegate(_:)` | Registers a delegate to receive item lifecycle callbacks. Can also be set via `WalkMeStartOptions.itemCallbacksDelegate` before calling `start`. |
+| `setExternalBridgeDelegate(_:)` | Registers a `WMExternalBridgeInterface` bridge for external non-native UI frameworks (for example - Flutter). |
 
 ### Swift example
 
