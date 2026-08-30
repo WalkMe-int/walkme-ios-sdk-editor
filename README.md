@@ -78,7 +78,7 @@ See `WalkMe/WalkMe/Common/Player/Public/WalkMeStartOptions.swift` for full defin
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `eventType` | `WMPublicEventType` | Enum: `play`, `click`, `close`, `sessionStarted`, `engagedElement`, `changeLanguage`, `activity`, `pageChange`, `na`. |
+| `eventType` | `WMPublicEventType` | Enum: `play`, `click`, `close`, `engagedElement`, `changeLanguage`, `activity`, `pageChange`, `na`, `goalReached`. |
 | `payload` | `[String: Any]` | Full analytics payload for the event. |
 
 ```swift
@@ -131,6 +131,22 @@ WalkMePowerMode.setItemCallbacksDelegate(myDelegate)
 | `itemType` | Type string: `"Flow"`, `"ShoutOut"`, or `"Launcher"`. |
 | `userData` | `WalkMeUserInfo` snapshot with device and app context at the time of the callback. |
 | `action` | Dismiss reason string. `nil` for `itemWillShow` or when the reason is unknown. |
+
+### Tagging SwiftUI views
+
+Attach a stable, unique identifier to a SwiftUI view so WalkMe can identify it independently of its text, position, or localization:
+
+```swift
+Button("Checkout") { ... }
+    .walkMeTag("checkout-button")
+```
+
+- The tag is included in the element's description when the element is captured.
+- Empty strings are ignored — `walkMeTag("")` behaves as if the modifier were not applied.
+- When tagged views are nested or overlap, the most specific (smallest-area) tag wins.
+- The modifier installs a fully transparent overlay that does not affect layout, touch handling, or accessibility.
+- When a captured element has a tag, WalkMe finds it by the tag alone — independent of layout, text, or position changes. If no view with that tag is on screen, the element is treated as not found (there is no fallback to positional matching), so keep tags stable across app versions.
+- Tags must be unique per screen. If the same tag appears more than once, a tap resolves to the instance actually tapped, while a match made without a tap resolves to the first instance in view-hierarchy order (the first one currently on screen, if the item's Check Visibility option is enabled).
 
 ## Support
 
