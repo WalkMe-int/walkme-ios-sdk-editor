@@ -6,7 +6,7 @@ The WalkMe Editor (power mode) SDK embeds the in-app editor so you can author an
 
 ## Requirements
 
-- iOS **14.0** or later  
+- iOS **15.0** or later  
 - **Swift 5.0** or later  
 - **Xcode** with Swift Package Manager support  
 
